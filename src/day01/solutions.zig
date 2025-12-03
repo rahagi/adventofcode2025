@@ -2,7 +2,7 @@ const std = @import("std");
 const utils = @import("../utils.zig");
 
 pub fn a(alloc: std.mem.Allocator, file_path: []const u8) !usize {
-    var it = try utils.FileLineIterator.init(alloc, file_path);
+    var it = try utils.FileContentIterator.init(alloc, file_path, '\n');
     defer it.deinit();
 
     var dial: isize = 50;
@@ -27,7 +27,7 @@ pub fn a(alloc: std.mem.Allocator, file_path: []const u8) !usize {
 }
 
 pub fn b(alloc: std.mem.Allocator, file_path: []const u8) !usize {
-    var it = try utils.FileLineIterator.init(alloc, file_path);
+    var it = try utils.FileContentIterator.init(alloc, file_path, '\n');
     defer it.deinit();
 
     var dial: isize = 50;
