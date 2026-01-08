@@ -1,1 +1,6 @@
-.zig-cache/
+.ccls-cache
+.direnv
+compile_commands.json
+bin/*
+/day*
+!/day*.c
