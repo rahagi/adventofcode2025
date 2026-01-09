@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define INPUT_PATH "input/day01.txt"
+
 int wraps_to_zeros = 0;
 int dial = 50;
 int zeros = 0;
@@ -27,7 +29,7 @@ void solve(char turn_dir, int turn_amount)
 
 int main(void)
 {
-  FILE *input = fopen("input/day01.txt", "r");
+  FILE *input = fopen(INPUT_PATH, "r");
   if (input == NULL)
     return 1;
 
